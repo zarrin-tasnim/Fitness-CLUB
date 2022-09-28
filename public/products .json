@@ -1,0 +1,44 @@
+[
+  {
+    "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    "name": "Cycling",
+    "img": "https://www.siroko.com/blog/c/app/uploads/2021/07/efectos-positivos_f766ef96-0811-452d-bbf8-ec38d244637a-1440x900.jpg",
+    "timing": 20,
+    "quantity": 0
+  },
+  {
+    "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+    "name": "Swimming",
+    "img": "https://sportsmatik.com/uploads/matik-sports-corner/matik-know-how/swimming1_1562582117.jpg",
+    "timing": 14,
+    "quantity": 0
+  },
+  {
+    "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+    "name": "Walking",
+    "img": "https://i.insider.com/5eea8a48f0f419386721f9e8?width=1136&format=jpeg",
+    "timing": 120,
+    "quantity": 0
+  },
+  {
+    "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
+    "name": "Rowing",
+    "img": "https://cdn.britannica.com/76/4376-050-FFC08200/rowing-Hansa-Dortmund-Grand-Challenge-Cup-Henley-1989.jpg",
+    "timing": 32,
+    "quantity": 0
+  },
+  {
+    "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
+    "name": "Running",
+    "img": "https://www.news-medical.net/images/Article_Images/ImageForArticle_22980_16600577310868068.jpg",
+    "timing": 49,
+    "quantity": 0
+  },
+  {
+    "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
+    "name": "Jumping rope",
+    "img": "https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/550abc16-1f02-446e-b5ce-60e9df5430ab/what-are-the-benefits-of-jumping-rope-every-day.jpg",
+    "timing": 20,
+    "quantity": 0
+  }
+]
