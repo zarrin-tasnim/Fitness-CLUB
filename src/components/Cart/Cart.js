@@ -1,10 +1,21 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = () => {
+const Cart = (props) => {
+    console.log(props);
+    const { activity, handleCLick } = props;
+    const { name, img, timing } = activity;
     return (
-        <div>
-            
+        <div className='activity-card'>
+            <img src={img} alt="" srcset="" />
+            <div className="activity-info">
+                <p className='activity-name'>{name}</p>
+                {/* <p>{p-details}</p> */}
+                <p>Timing : {timing} seconds</p>
+            </div>
+            <button className='cart-btn'>
+                <p className='btn-text'>Select To Cart</p>
+            </button>
         </div>
     );
 };
