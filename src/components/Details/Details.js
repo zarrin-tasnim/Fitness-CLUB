@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Details = (props) => {
-    const [brk, setBrk] = useState([]);
+    const [brk = 0, setBrk] = useState([]);
     const { detail, handleBtn } = props;
 
     console.log(detail);
@@ -19,6 +19,46 @@ const Details = (props) => {
 
     const notify = () => toast("Congratulations!");
 
+    const addTime = () => {
+        const second = document.getElementById('btn1').innerText;
+        console.log(second);
+        const cart2 = {};
+        let time;
+        cart2['time'] = second;
+        localStorage.setItem('time', JSON.stringify(cart2));
+    }
+    const addTime20 = () => {
+        const second = document.getElementById('btn2').innerText;
+        console.log(second);
+        const cart2 = {};
+        let time;
+        cart2['time'] = second;
+        localStorage.setItem('time', JSON.stringify(cart2));
+    }
+    const addTime30 = () => {
+        const second = document.getElementById('btn3').innerText;
+        console.log(second);
+        const cart2 = {};
+        let time;
+        cart2['time'] = second;
+        localStorage.setItem('time', JSON.stringify(cart2));
+    }
+    const addTime40 = () => {
+        const second = document.getElementById('btn4').innerText;
+        console.log(second);
+
+        const cart2 = {};
+        let time;
+        cart2['time'] = second;
+        localStorage.setItem('time', JSON.stringify(cart2));
+    }
+    const addTime50 = () => {
+        const second = document.getElementById('btn5').innerText;
+        const cart2 = {};
+        let time;
+        cart2['time'] = second;
+        localStorage.setItem('time', JSON.stringify(cart2));
+    }
 
     return (
         <div className='details'>
@@ -51,13 +91,14 @@ const Details = (props) => {
             <div className="add-a-break">
                 <h2>Add A Break</h2>
                 <div className="break-time">
-                    <button id='btn1' onClick={() => setBrk(brk + 10)}>10s</button>
-                    <button onClick={() => {
-                        setBrk(brk + 30);
+                    <button id='btn1' onClick={() => addTime(setBrk(10))}>10s</button>
+                    <button id='btn2' onClick={() => addTime20(setBrk(20))}>20s</button>
+                    <button id='btn3' onClick={() => {
 
+                        addTime30(setBrk(30));
                     }}>30s</button>
-                    <button onClick={() => setBrk(brk + 40)}>40s</button>
-                    <button onClick={() => setBrk(brk + 50)}>50s</button>
+                    <button id='btn4' onClick={() => addTime40(setBrk(40))}>40s</button>
+                    <button id='btn5' onClick={() => addTime50(setBrk(50))}>50s</button>
                 </div>
             </div>
             <div className="exercise-details">
