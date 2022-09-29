@@ -32,3 +32,24 @@
     }
 }
 
+@media screen and (max-width:768px) {
+    .fitness-container {
+
+        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .activity-container {
+
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .questionAns-container {
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
