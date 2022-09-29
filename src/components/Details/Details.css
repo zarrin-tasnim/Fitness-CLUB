@@ -59,7 +59,11 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-
+.breakTime{
+    display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+}
 .exercise-details {
     margin-top: 20px;
     background-color: ;
