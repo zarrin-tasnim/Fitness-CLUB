@@ -14,7 +14,7 @@ const Cart = (props) => {
                 <p>Timing : {timing} seconds</p>
             </div>
             <button className='cart-btn'>
-                <p className='btn-text'>Select To Cart</p>
+                <p className='btn-text'>Add To List</p>
             </button>
         </div>
     );
