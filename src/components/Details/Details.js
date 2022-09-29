@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import './Details.css';
 
-const Details = () => {
-   
+const Details = (props) => {
+    const [brk, setBrk] = useState([]);
+    const { detail, handleBtn } = props;
+
+    console.log(detail);
+    let totalTiming = 0;
+
+    for (const details of detail) {
+
+        totalTiming = totalTiming + details.timing;
+    }
+
+
     return (
         <div className='details'>
             <div className="my-info">
@@ -36,22 +47,22 @@ const Details = () => {
             <div className="add-a-break">
                 <h2>Add A Break</h2>
                 <div className="break-time">
-                    <button>10s</button>
-                    <button>20s</button>
-                    <button>30s</button>
-                    <button>40s</button>
-                    <button>50s</button>
+                    <button id='btn1' onClick={() => setBrk(brk + 10)}>10s</button>
+                    <button onClick={() => setBrk(brk + 20) }>20s</button>
+                    <button onClick={() => setBrk(brk + 30)}>30s</button>
+                    <button onClick={() => setBrk(brk + 40)}>40s</button>
+                    <button onClick={() => setBrk(brk + 50)}>50s</button>
                 </div>
             </div>
             <div className="exercise-details">
                 <h1>Exercise Details</h1>
                 <div className="total-time">
-                    <p>Exercise Time</p>
-                    <p></p>
+                    <p>Exercise Time: {totalTiming}</p>
+
                 </div>
                 <div className="breakTime">
                     <p>Break Time</p>
-                    <p></p>
+                    <p id='brkTimeee'>{brk}</p>
                 </div>
             </div>
             <button className='complteBtn'>Activity Completed</button>

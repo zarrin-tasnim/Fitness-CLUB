@@ -2,9 +2,12 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = (props) => {
-    console.log(props);
-    const { activity, handleCLick } = props;
+
+    const { activity, handleClick } = props;
     const { name, img, timing } = activity;
+    // console.log(props);
+
+
     return (
         <div className='activity-card'>
             <img src={img} alt="" srcset="" />
@@ -13,7 +16,7 @@ const Cart = (props) => {
                 {/* <p>{p-details}</p> */}
                 <p>Timing : {timing} seconds</p>
             </div>
-            <button className='cart-btn'>
+            <button onClick={() => handleClick(props.activity)} className='cart-btn'>
                 <p className='btn-text'>Add To List</p>
             </button>
         </div>

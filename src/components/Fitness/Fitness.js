@@ -7,6 +7,8 @@ import './Fitness.css';
 const Fitness = () => {
     const [activity, setProducts] = useState([]);
     const [cart, setCarts] = useState([]);
+    const [detail, setDetail] = useState([]);
+    
 
     useEffect(() => {
         fetch('activity.json')
@@ -14,6 +16,14 @@ const Fitness = () => {
             .then(data => setProducts(data))
     }, [])
     // console.log(activity);
+
+    const handleClick = (activity) => {
+        // console.log(activity);
+
+        const newCart = [...detail, activity];
+        setDetail(newCart);
+    }
+
     return (
         <div className='fitness-container'>
 
@@ -22,13 +32,13 @@ const Fitness = () => {
                 {/* <h3>This is for activity : {activity.length}</h3> */}
 
                 {
-                    activity.map(activity => <Cart key={cart.id} activity={activity}>
+                    activity.map(activity => <Cart key={cart.id} activity={activity} handleClick={handleClick} >
 
                     </Cart>)
                 }
             </div>
             <div className="details-container">
-                <Details></Details>
+                <Details detail={detail} ></Details>
             </div>
             <div className="questionAns-container">
                 <div className="q1">
