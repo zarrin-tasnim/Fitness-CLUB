@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import './Details.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Details = (props) => {
     const [brk, setBrk] = useState([]);
@@ -14,6 +16,8 @@ const Details = (props) => {
 
         totalTiming = totalTiming + details.timing;
     }
+
+    const notify = () => toast("Congratulations!");
 
 
     return (
@@ -48,8 +52,10 @@ const Details = (props) => {
                 <h2>Add A Break</h2>
                 <div className="break-time">
                     <button id='btn1' onClick={() => setBrk(brk + 10)}>10s</button>
-                    <button onClick={() => setBrk(brk + 20) }>20s</button>
-                    <button onClick={() => setBrk(brk + 30)}>30s</button>
+                    <button onClick={() => {
+                        setBrk(brk + 30);
+
+                    }}>30s</button>
                     <button onClick={() => setBrk(brk + 40)}>40s</button>
                     <button onClick={() => setBrk(brk + 50)}>50s</button>
                 </div>
@@ -65,7 +71,8 @@ const Details = (props) => {
                     <p id='brkTimeee'>{brk}</p>
                 </div>
             </div>
-            <button className='complteBtn'>Activity Completed</button>
+            <button className='complteBtn' onClick={notify}>Activity Completed</button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
